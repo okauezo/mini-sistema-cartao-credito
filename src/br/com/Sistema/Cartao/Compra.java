@@ -1,6 +1,6 @@
 package br.com.Sistema.Cartao;
 
-public class Compra {
+public class Compra implements Comparable<Compra>{
 
     private String descricao;
     private double valor;
@@ -9,6 +9,7 @@ public class Compra {
         this.descricao = descricao;
         this.valor =  valor;
     }
+
 
     public String getDescricao() {        return descricao;
     }
@@ -23,5 +24,15 @@ public class Compra {
 
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        return "Compra{" + "descricao= " + descricao + ", valor= " + valor + '}';
+    }
+
+    @Override
+    public int compareTo(Compra o) {
+        return 0;
     }
 }
