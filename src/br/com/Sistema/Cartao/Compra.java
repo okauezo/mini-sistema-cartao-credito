@@ -10,7 +10,6 @@ public class Compra implements Comparable<Compra>{
         this.valor =  valor;
     }
 
-
     public String getDescricao() {        return descricao;
     }
 
@@ -33,6 +32,6 @@ public class Compra implements Comparable<Compra>{
 
     @Override
     public int compareTo(Compra o) {
-        return 0;
+        return Double.compare(this.valor, o.valor);
     }
 }
