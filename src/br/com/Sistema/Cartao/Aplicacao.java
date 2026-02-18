@@ -16,5 +16,11 @@ public class Aplicacao {
         saldo = sc.nextDouble();
         sc.nextLine();
 
+        int opcao = 1;
+        while (opcao != 0) {
+            System.out.println("Digite valor da compra? ");
+            double valor = sc.nextDouble();
+            if (saldo <= valor )
+        }
     }
 }
