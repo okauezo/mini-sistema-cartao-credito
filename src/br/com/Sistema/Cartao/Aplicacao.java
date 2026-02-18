@@ -18,9 +18,22 @@ public class Aplicacao {
 
         int opcao = 1;
         while (opcao != 0) {
+            System.out.println("Digite a descrição da compra: ");
+            String descricao = sc.nextLine();
+
             System.out.println("Digite valor da compra? ");
             double valor = sc.nextDouble();
-            if (saldo <= valor )
+            sc.nextLine();
+
+            if (valor <= saldo) {
+                Compra compra = new Compra(descricao, valor);
+                compras.add(compra);
+                saldo -= valor;
+                System.out.println("Compra realizada com sucesso!");
+                System.out.println("Digite 0 para sair ou 1 para continuar: ");
+                opcao = sc.nextInt();
+                sc.nextLine();
+            }
         }
     }
 }
