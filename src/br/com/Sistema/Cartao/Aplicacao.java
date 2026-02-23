@@ -48,7 +48,7 @@ public class Aplicacao {
         }
 
         System.out.println();
-        System.out.println("Saldo do Cartão: " + saldo);
+        System.out.println("Saldo do Cartão: " + "R$" + saldo);
 
         sc.close();
     }
