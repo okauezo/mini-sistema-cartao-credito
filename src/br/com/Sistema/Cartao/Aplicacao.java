@@ -35,12 +35,13 @@ public class Aplicacao {
                 opcao = sc.nextInt();
                 sc.nextLine();
             } else {
-                System.out.println("Saldo Invalido!");
+                System.out.println("Saldo insuficiente!");
             break;
             }
         }
         Collections.sort(compras);
         System.out.println();
+        System.out.println("COMPRAS REALIZADAS:");
 
         for(Compra compra : compras) {
             System.out.println(compra);
