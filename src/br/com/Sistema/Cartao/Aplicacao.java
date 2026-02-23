@@ -1,6 +1,7 @@
 package br.com.Sistema.Cartao;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -33,7 +34,16 @@ public class Aplicacao {
                 System.out.println("Digite 0 para sair ou 1 para continuar: ");
                 opcao = sc.nextInt();
                 sc.nextLine();
+            } else {
+                System.out.println("Saldo Invalido!");
+            break;
             }
+        }
+        Collections.sort(compras);
+        System.out.println();
+
+        for(Compra compra : compras) {
+            System.out.println(compra);
         }
     }
 }
