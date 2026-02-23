@@ -13,16 +13,16 @@ public class Aplicacao {
         List<Compra> compras = new ArrayList<>();
 
         double saldo;
-        System.out.println("Digite o limite do cartão: ");
+        System.out.print("Digite o limite do cartão: ");
         saldo = sc.nextDouble();
         sc.nextLine();
 
         int opcao = 1;
         while (opcao != 0) {
-            System.out.println("Digite a descrição da compra: ");
+            System.out.print("Digite a descrição da compra: ");
             String descricao = sc.nextLine();
 
-            System.out.println("Digite valor da compra? ");
+            System.out.print("Digite valor da compra: ");
             double valor = sc.nextDouble();
             sc.nextLine();
 
@@ -31,7 +31,7 @@ public class Aplicacao {
                 compras.add(compra);
                 saldo -= valor;
                 System.out.println("Compra realizada com sucesso!");
-                System.out.println("Digite 0 para sair ou 1 para continuar: ");
+                System.out.print("Digite 0 para sair ou 1 para continuar: ");
                 opcao = sc.nextInt();
                 sc.nextLine();
             } else {
@@ -45,5 +45,10 @@ public class Aplicacao {
         for(Compra compra : compras) {
             System.out.println(compra);
         }
+
+        System.out.println();
+        System.out.println("Saldo do Cartão: " + saldo);
+
+        sc.close();
     }
 }
